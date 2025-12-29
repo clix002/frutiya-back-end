@@ -11,7 +11,7 @@ public class FrutiyaBackEndApplication {
 		Dotenv dotenv = Dotenv.configure()
 				.directory(".")
 				.ignoreIfMissing()
-				.load();
+				.load();http://localhost:8080/
 		
 		dotenv.entries().forEach(entry ->
 			System.setProperty(entry.getKey(), entry.getValue())
