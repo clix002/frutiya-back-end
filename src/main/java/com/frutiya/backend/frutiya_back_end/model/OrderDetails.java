@@ -21,7 +21,6 @@ public class OrderDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Integer productId;
     private Integer quantity;
     private BigDecimal price;
 
