@@ -1,8 +1,6 @@
 package com.frutiya.backend.frutiya_back_end.model;
 
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
-
+import java.sql.Date;
 import com.frutiya.backend.frutiya_back_end.domain.EstadoPedido;
 
 import jakarta.persistence.Entity;
@@ -16,18 +14,12 @@ import lombok.Data;
 @Data
 @Entity
 public class Orders {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private User customer;
-    private User deliveryPerson;
+    private Integer costomerId;
+    private Integer deliveryPersonId;
     @Enumerated(EnumType.STRING)
     private EstadoPedido status;
-    private Integer stock;
-    private Boolean state;
-    private LocalDateTime createdAt;
-
-
-
+    private Date orderDate;
 }
