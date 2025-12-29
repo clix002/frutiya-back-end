@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController6
+@RestController
 public class CSaludo {
 
     @Autowired
