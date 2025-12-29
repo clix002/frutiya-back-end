@@ -1,6 +1,5 @@
 package com.frutiya.backend.frutiya_back_end.model;
 
-import java.math.BigDecimal;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -8,12 +7,11 @@ import jakarta.persistence.Id;
 import lombok.Data;
 @Data
 @Entity
-public class Order_details {
+public class CartDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Integer userId;
+    private Integer cartId;
     private Integer productId;
     private Integer quantity;
-    private BigDecimal price;
 }
