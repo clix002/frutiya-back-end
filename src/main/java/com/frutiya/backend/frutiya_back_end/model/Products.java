@@ -32,6 +32,7 @@ public class Products {
     private String name;
     @Enumerated(EnumType.STRING)
     private Category category;
+    private BigDecimal pricePerKilogram;
     private String description;
     private BigDecimal price;
     private Integer stock;
