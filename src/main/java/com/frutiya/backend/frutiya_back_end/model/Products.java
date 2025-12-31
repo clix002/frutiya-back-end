@@ -5,6 +5,8 @@ import java.time.LocalDateTime;
 import java.util.Set;
 import java.util.Locale.Category;
 
+import com.frutiya.backend.frutiya_back_end.domain.CategoryProducts;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -31,7 +33,7 @@ public class Products {
     private Long id;
     private String name;
     @Enumerated(EnumType.STRING)
-    private Category category;
+    private CategoryProducts category;
     private BigDecimal pricePerKilogram;
     private String description;
     private BigDecimal price;
