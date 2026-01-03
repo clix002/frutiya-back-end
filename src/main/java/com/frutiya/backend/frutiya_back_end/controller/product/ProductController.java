@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,6 +18,7 @@ public class ProductController {
     @Autowired
     private ProductsRepository db;
 
+    @GetMapping
     public ResponseEntity<Page<Products>>  getAllProducts(Pageable pageable){
         Page<Products> products = db.findByState(true, pageable);
         return ResponseEntity.ok(products);
